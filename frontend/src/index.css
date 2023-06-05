@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+textarea {
+    @apply w-full border my-1 py-2 px-3 rounded-2xl;
+}
+
+textarea {
+    height: 140px;
+}
+
+button {
+    @apply bg-gray-300;
+    font-family: 'Poppins', sans-serif;
+}
+
+button.primary {
+    background-color: #FF585D;
+    @apply bg-primary p-2 w-full text-white rounded-2xl;
+}
+
+p, label, h1, h2, h3, h4, h5, h6, span, a, li, ul, ol, button, input, textarea {
+    font-family: 'Poppins', sans-serif;
+}
+
+button.primaryO {
+    border: 2px solid #F5385D;
+    background-color: transparent;
+    width: 100%;
+    color: #F5385D;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+input {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-grad-outline{
+    font-family: 'Popins', sans-serif;
+    background-color: transparent;
+    color:#FF585D;
+    border: 2px solid #FF585D;
+    font-weight: 600;
+    padding: 8px 40px;
+    min-width: 125px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 10px;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-grad-outline {
+        min-width: 100px;
+        padding: 8px 20px;
+        font-size: 14px;
+    }  
+    .btn-grad {
+        min-width: 100px;
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+.dotFlashing {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    animation: dot-flashing 1s infinite linear alternate;
+    animation-delay: 0.5s;
+  }
+  .dotFlashing::before, .dotFlashing::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  .dotFlashing::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  .dotFlashing::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 1s;
+  }
+  
+  @keyframes dot-flashing {
+    0% {
+      background-color: rgb(255, 255, 255);
+    }
+    50%, 100% {
+      background-color: rgba(228, 228, 228, 0.2);
+    }
+  }
+
+.btn-grad {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right, #FF585D, #FFA68D 100%);
+    font-weight: 500;
+    margin: 2px;
+    padding: 8px 40px;
+    min-width: 125px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}

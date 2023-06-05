@@ -1,0 +1,34 @@
+{
+    "apps": [
+      {
+        "name": "Eventor",
+        "script": "index.js",
+        "watch": true,
+        "ignore_watch": ["node_modules", "jobs"],
+        "env": {
+          "NODE_ENV": "production"
+        }
+      },
+      {
+        "name": "Expire",
+        "script": "./jobs/expire.js",
+        "env": {
+          "NODE_ENV": "production"
+        }
+      },
+      {
+        "name": "Send Email",
+        "script": "./jobs/email.js",
+        "env": {
+          "NODE_ENV": "production"
+        }
+      },
+      {
+        "name": "Recurring Events",
+        "script": "./jobs/recurring.js",
+        "env": {
+          "NODE_ENV": "production"
+        }
+      }
+    ]
+}
